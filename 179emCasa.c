@@ -39,6 +39,13 @@ char *largestNumber(int *nums, int numsSize)
         }
     }
 
+    if (nums[0] == 0)
+    {
+        char *res = malloc(2);
+        strcpy(res, "0");
+        return res;
+    }
+
     char *res = (char *)malloc(1000 * sizeof(char));
     res[0] = '\0';
     for (int i = 0; i < numsSize; i++)
